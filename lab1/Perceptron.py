@@ -69,7 +69,7 @@ test_data_x = [
 
 true_data_y = [1, 1, 1, 0]
 
-# df2 = pandas.read_csv("data.csv")
+# df2 = pandas.read_csv("../data.csv")
 #
 # tr_data_x = df2[:16].iloc[:, :2].to_numpy()
 # tr_data_y = df2[:16]['class'].to_numpy()
