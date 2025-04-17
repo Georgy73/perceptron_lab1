@@ -20,25 +20,6 @@ class Perceptron:
         else:
             return 0.0
 
-    def train_gradient(self, train_x, train_y):
-        length = len(train_x)
-        iterations = 0
-        while iterations <= self.epochs:
-            global_error = 0
-            for i in (range(length)):
-                self.inputs = train_x[i]
-                out = self.activation()
-
-                error = ((train_y[i] - out) ** 2) / 2  # E = 1/2(d-y)^2
-                global_error += abs(error / length)
-
-                out_derivative = out * (1 - out)  # производная выхода
-                grad = out_derivative * error
-                for it in range(len(self.inputs)):
-                    self.weights[it] += self.learn_speed * grad * self.inputs[it]
-
-            iterations += 1
-
     def train(self, train_x, train_y):
         length = len(train_x)
         iterations = 0
